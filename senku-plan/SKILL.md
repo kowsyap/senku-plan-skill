@@ -174,9 +174,11 @@ Give the file, then a short message with:
 
 Read `reference/design.md` first. Then:
 
-1. **Ask** the questions in its step 1, all in one message, with defaults.
-   Skip anything already said. Stop and advise a doctor where it says to.
-2. **Pick the shape** of the week (design step 2) and the days for the file.
+1. **Ask** the questions in its step 1, **one at a time**, each with numbered
+   options and the recommended one first. Wait for each answer before the
+   next. Skip anything already said. Stop and advise a doctor where it says to.
+2. **Use the split** they chose (design step 2), or the recommended one, and
+   lay out the days for the file.
 3. **Choose exercises** for each day: the movement patterns (step 3), the
    equipment filter (step 7), heaviest first (step 5), sized to the time
    (step 4). Use `python3 scripts/senku_plan.py list --group G` to see a
@@ -192,9 +194,11 @@ Read `reference/design.md` first. Then:
 
    Fix every ✗ from `validate`. For each ⚠ from `volume`, adjust (add a set, an
    exercise, or move one to another day) unless there is a reason not to, such
-   as a two-day week or an injury, and say why you left it.
-6. **Hand it over** as in Converting, step 8, with the extra guidance in design step 8,
-   and one line on how to run it: train the days in order, then start again.
+   as a two-day week, an injury or a once-a-week split they chose, and say why
+   you left it.
+6. **Hand it over** as in Converting, step 8, with the extra guidance in design
+   step 8, which split it is and why, and one line on how to run it: train the
+   days in order, then start again.
 
 Making a plan never needs custom exercises: everything comes from the
 catalogue.

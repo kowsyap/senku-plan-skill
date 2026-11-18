@@ -6,11 +6,12 @@ changes.
 
 ## How to do it
 
-1. **Ask me first**, all in one message, each question with a default (see
-   "Designing a plan", step 1, below). If I already told you something, don't
-   ask it again. If I say "defaults are fine", go with the defaults.
-2. **Design the week** following "Designing a plan" below: the shape of the
-   week, the movement patterns, volume, order, sets and reps, and exercises my
+1. **Ask me first, one question at a time**, each with numbered options and
+   the recommended one first (see "Designing a plan", step 1, below). Wait for
+   my answer before asking the next. If I already told you something, don't
+   ask it again. If I say "defaults", use the recommended answers for the rest.
+2. **Design the week** following "Designing a plan" below: the split I chose,
+   the movement patterns, volume, order, sets and reps, and exercises my
    equipment allows.
 3. **Use only exercises from the catalogue below**, each written by its
    **Name exactly as listed**, copied character for character. If the catalogue
@@ -25,11 +26,12 @@ changes.
    the top level has only `schemaVersion`, `catalogueVersion`, `plan` and
    `customExercises`. Count the hard sets each major muscle gets in a week at
    my number of training days; adjust anything far below 10, above 20, or hit
-   only once a week when I train 3 or more days.
+   only once a week when I train 3 or more days (unless I chose a once-a-week
+   split).
 6. **Answer with** the JSON file (as a downloadable file if you can, otherwise
-   one code block), then: each day with its exercises and sets × reps, how to
-   run it (train the days in order, then start again), and the short guidance
-   from "Designing a plan", step 8.
+   one code block), then: which split it is and why, each day with its
+   exercises and sets × reps, how to run it (train the days in order, then
+   start again), and the short guidance from "Designing a plan", step 8.
 
 # Designing a plan
 
@@ -40,39 +42,77 @@ exactly as the catalogue lists it.
 These are mainstream, well-tested starting points, not the only right answers.
 A sensible plan the person will follow beats a perfect one they will not.
 
-## 1. Ask, once
+## 1. Ask, one question at a time
 
-Ask everything in **one message**, each with a default, so a reply of "defaults
-are fine" is enough. Skip anything you were already told.
+Ask **one question per message**, each with numbered options to pick from, the
+recommended one first and marked. Wait for the answer, then ask the next. Later
+questions depend on earlier answers (the split options depend on the days, the
+equipment follow-up on the equipment), so this order matters:
 
-| Question | Choices | Default |
-| --- | --- | --- |
-| Main goal | build muscle · get stronger · general fitness · lose fat | build muscle |
-| Days a week | 2 to 6 | 4 |
-| Time per session | 30 · 45 · 60 · 75+ minutes | 60 |
-| Equipment | full gym · home with dumbbells (and a bench?) · bodyweight only | full gym |
-| Experience | new (under 6 months) · some (6 months to 2 years) · lots | some |
-| Avoid | injuries, painful movements, exercises they dislike | none |
-| Focus | muscles they want more of, if any | none |
+1. **Main goal:** 1. Build muscle *(recommended)* · 2. Get stronger ·
+   3. General fitness · 4. Lose fat
+2. **Days a week:** 2 · 3 · 4 *(recommended)* · 5 · 6. Number these by the
+   day count itself (2. Two days, 3. Three days…), never 1 to 5: a reply of
+   "2" must mean two days.
+3. **Split:** the options for their number of days, from the table in step 2,
+   with *Pick the best for me* first. Give each a few words on what it means
+   for them, such as "each muscle twice a week".
+4. **Time per session:** 1. 30 min · 2. 45 min · 3. 60 min *(recommended)* ·
+   4. 75 min · 5. 90 min or more
+5. **Equipment:** 1. Full gym *(recommended)* · 2. Home, with dumbbells ·
+   3. Bodyweight only
+   - **Only if home:** what else they have, more than one allowed: a bench, a
+     pull-up bar, a kettlebell, none of these.
+6. **Experience:** 1. Some, 6 months to 2 years *(recommended)* · 2. New, under
+   6 months · 3. Lots, over 2 years
+7. **Anything to avoid:** 1. Nothing *(recommended)* · 2. Yes
+   - **Only if yes:** what, in their words: an injury, a movement, exercises
+     they dislike.
+8. **Focus:** 1. None, balanced *(recommended)* · or any of: chest, back,
+   shoulders, arms, legs, glutes, abs (more than one allowed).
+9. **Health check:** 1. None of these apply *(recommended)* · 2. Something
+   applies: pain right now, chest pain or dizziness when exercising, a heart or
+   other medical condition, pregnancy, or being under 18.
+   - **If something applies:** say plainly that they should check with a doctor
+     before training hard, and keep the plan conservative.
 
-If they mention **pain now, chest pain, dizziness, pregnancy, a heart or other
-medical condition, or being under 18**, say plainly that they should check
-with a doctor before training hard, and keep the plan conservative.
+Rules for asking:
 
-## 2. Pick the shape of the week
+- **Skip** any question already answered in what they said ("a 4-day plan" has
+  answered question 2).
+- They can answer with the number, the words, or anything in between.
+- If they say "defaults", "you choose" or similar, take the recommended answer
+  for every question left and go on.
+- **Use selectable options whenever the tool you run in can show them** (a
+  question the person answers by tapping a choice, such as Claude Code's
+  question tool). Only write the numbered list where it cannot.
+- Keep each question to one line plus its options. No preamble.
+
+## 2. The split
 
 Senku lists each **distinct** day once and the person picks one each time they
 train, cycling through. So a six-day push/pull/legs is three days in the file.
 
-| Days a week | Shape | Days in the file |
+Offer these for question 3, the recommended one first:
+
+| Days a week | Options | Days in the file |
 | --- | --- | --- |
-| 2–3 | Full body | 2 (A, B) for 2 days; 3 (A, B, C) for 3 days |
-| 4 | Upper / Lower | 4: Upper A, Lower A, Upper B, Lower B |
-| 5 | Upper / Lower + Push / Pull / Legs | 5: Upper, Lower, Push, Pull, Legs |
-| 6 | Push / Pull / Legs, twice | 3: Push, Pull, Legs (or 6 with A/B variants for variety) |
+| 2 | **Full body A/B** (each muscle twice) · Upper / Lower (each muscle once) | 2 |
+| 3 | **Full body A/B/C** (each muscle 2–3 times) · Upper / Lower / Full (about twice) · Push / Pull / Legs (once, longer sessions) · Chest+Back / Arms+Shoulders / Legs (once) | 3 |
+| 4 | **Upper / Lower, twice** (each muscle twice) · Push / Pull / Legs / Upper (2 for the upper body, 1 for legs) · Full body A/B, twice (twice, shorter sessions) | 4 |
+| 5 | **Upper / Lower + Push / Pull / Legs** (each muscle about twice) · Push / Pull / Legs / Upper / Lower (the same, in another order) · One group a day (once, the most per session) | 5 |
+| 6 | **Push / Pull / Legs, twice** (each muscle twice) · Upper / Lower, three times (three times, shorter sessions) · Chest+Back / Arms+Shoulders / Legs, twice (twice) | 3 or 6 |
+
+*Pick the best for me* means the first one. For building muscle, every
+muscle twice a week beats once, which is why the first option is first. If they
+choose a once-a-week split, make it work: more sets per muscle in that one
+session.
 
 Prefer A/B variants over identical repeats when there is room: the same muscles
 with different exercises spreads the work across angles.
+
+When handing the plan over, say which split it is and, in a line, why: their
+choice, or why it fits their days.
 
 Tell the person how to run it in the app: "Train them in order and start again
 at the top."
